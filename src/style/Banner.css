@@ -1,0 +1,25 @@
+.banner-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .banner-img {
+        max-height: 250px;
+    }
+
+    .banner-caption {
+        max-width: 95%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,73 @@
+/* Setas de navegação */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow.left {
+  left: -10px;
+}
+
+.carousel-arrow.right {
+  right: -10px;
+}
+
+/* Esconde a barra de rolagem */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Estilo responsivo dos cards */
+.product-card-wrapper {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: 1rem;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@media (min-width: 576px) {
+  .product-card-wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-card-wrapper {
+    width: 45%;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-card-wrapper {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-card-wrapper {
+    width: 25%;
+  }
+}

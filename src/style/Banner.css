@@ -1,17 +1,35 @@
 .banner-img {
-    max-height: 400px;
     width: 100%;
+    height: auto;
+    max-height: 400px;
     object-fit: cover;
+    display: block;
 }
 
 .banner-caption {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* fundo semitransparente */
     padding: 1rem;
     border-radius: 10px;
     max-width: 80%;
     margin: auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+/* títulos */
+.banner-caption h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* parágrafos */
+.banner-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Responsivo para dispositivos médios */
 @media (max-width: 768px) {
     .banner-img {
         max-height: 250px;
@@ -20,6 +38,32 @@
     .banner-caption {
         max-width: 95%;
         padding: 0.5rem;
+    }
+
+    .banner-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .banner-caption p {
         font-size: 0.9rem;
+    }
+}
+
+/* Responsivo para dispositivos pequenos */
+@media (max-width: 400px) {
+    .banner-img {
+        max-height: 180px;
+    }
+
+    .banner-caption {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .banner-caption h3 {
+        font-size: 1rem;
+    }
+
+    .banner-caption p {
+        font-size: 0.8rem;
     }
 }

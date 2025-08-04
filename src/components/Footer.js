@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => (
   <footer style={{ backgroundColor: '#D63384' }} className="text-white py-4">
@@ -15,6 +15,16 @@ const Footer = () => (
           <p><FaPhoneAlt className="me-2" /> (21) 99999-9999</p>
           <p><FaEnvelope className="me-2" /> contato@petshopfeliz.com.br</p>
           <p><FaMapMarkerAlt className="me-2" /> Av. das Flores, 123 - Centro, RJ</p>
+          <p>
+            <a
+              href="https://www.instagram.com/seuinstagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-decoration-none"
+            >
+              <FaInstagram className="me-2" /> @petshopfeliz
+            </a>
+          </p>
         </Col>
       </Row>
     </Container>

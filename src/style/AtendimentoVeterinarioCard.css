@@ -1,0 +1,41 @@
+.atendimento-img {
+  height: 280px;
+  object-fit: cover;
+}
+
+.atendimento-desc {
+  font-size: 0.95rem;
+  margin: 0 1rem;
+}
+
+.atendimento-list {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
+.atendimento-btn {
+  background-color: #D63384;
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Responsivo para dispositivos menores */
+@media (max-width: 768px) {
+  .atendimento-img {
+    height: 200px;
+  }
+
+  .atendimento-desc {
+    font-size: 0.9rem;
+  }
+
+  .atendimento-list {
+    font-size: 0.85rem;
+  }
+
+  .atendimento-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

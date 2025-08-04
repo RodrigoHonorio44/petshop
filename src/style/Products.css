@@ -13,6 +13,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: #f8f8f8;
 }
 
 .carousel-arrow.left {
@@ -29,8 +35,8 @@
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none;  /* IE e Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
 /* Estilo responsivo dos cards */
@@ -38,16 +44,10 @@
   flex: 0 0 auto;
   width: 100%;
   padding-right: 1rem;
-}
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  box-sizing: border-box;
 }
 
-
+/* Ajustes para telas maiores */
 @media (min-width: 576px) {
   .product-card-wrapper {
     width: 80%;

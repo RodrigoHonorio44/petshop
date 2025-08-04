@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import './../style/Banner.css'; // Certifique-se de criar esse arquivo com o CSS abaixo
+import './../style/Banner.css'; 
 import Design from '../assets/Design1.png';
 import Propaganda from '../assets/propaganda.png';
 import Simparic from '../assets/simparic.png';
@@ -10,10 +10,9 @@ import Petiscos from '../assets/petiscos.png';
 const Banner = () => {
     return (
         <Carousel interval={4000} controls indicators>
-            {/* Slide 1 */}
             <Carousel.Item>
                 <img
-                    className="d-block w-100 banner-img"
+                    className="d-block w-100 banner-img img-fluid"
                     src={Simparic}
                     alt="Cachorro com proteção"
                 />
@@ -22,11 +21,9 @@ const Banner = () => {
                     <p>É Cachorro Protegido contra pulgas e carrapatos!</p>
                 </Carousel.Caption>
             </Carousel.Item>
-
-            {/* Slide 2 */}
             <Carousel.Item>
                 <img
-                    className="d-block w-100 banner-img"
+                    className="d-block w-100 banner-img img-fluid"
                     src={Brinquedos}
                     alt="Pet shop moderno"
                 />
@@ -35,11 +32,9 @@ const Banner = () => {
                     <p>Rações, brinquedos e muito mais para seu pet</p>
                 </Carousel.Caption>
             </Carousel.Item>
-
-            {/* Slide 3 */}
             <Carousel.Item>
                 <img
-                    className="d-block w-100 banner-img"
+                    className="d-block w-100 banner-img img-fluid"
                     src={Petiscos}
                     alt="Petiscos para cachorro"
                 />
@@ -48,11 +43,9 @@ const Banner = () => {
                     <p>Seu pet merece os melhores Petiscos</p>
                 </Carousel.Caption>
             </Carousel.Item>
-
-            {/* Slide 4 - Propaganda Hydra Pet */}
             <Carousel.Item>
                 <img
-                    className="d-block w-100 banner-img"
+                    className="d-block w-100 banner-img img-fluid"
                     src={Propaganda}
                     alt="Linha Hydra Pet"
                 />

@@ -1,3 +1,4 @@
+// src/components/Products.js
 import React, { useRef, useEffect } from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -63,7 +64,7 @@ const Products = () => {
   }, []);
 
   return (
-    <section style={{ backgroundColor: '#FFF' }}> {/* Fundo rosa claro */}
+    <section style={{ backgroundColor: '#FFF0F5' }}>
       <Container id="produtos" className="py-5 position-relative">
         <h2 className="text-center mb-4" style={{ color: '#D63384' }}>
           🛍️ Produtos em Destaque
@@ -73,7 +74,14 @@ const Products = () => {
           variant="light"
           className="carousel-arrow left"
           onClick={() => scroll('left')}
-          style={{ position: 'absolute', top: '50%', left: 0, zIndex: 10 }}
+          aria-label="Scroll produtos para esquerda"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: 0,
+            zIndex: 10,
+            transform: 'translateY(-50%)',
+          }}
         >
           <FaChevronLeft color="#D63384" />
         </Button>
@@ -82,7 +90,14 @@ const Products = () => {
           variant="light"
           className="carousel-arrow right"
           onClick={() => scroll('right')}
-          style={{ position: 'absolute', top: '50%', right: 0, zIndex: 10 }}
+          aria-label="Scroll produtos para direita"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: 0,
+            zIndex: 10,
+            transform: 'translateY(-50%)',
+          }}
         >
           <FaChevronRight color="#D63384" />
         </Button>
@@ -93,7 +108,11 @@ const Products = () => {
           style={{ scrollBehavior: 'smooth', gap: '1rem' }}
         >
           {products.map((product, index) => (
-            <div key={index} className="product-card-wrapper">
+            <div
+              key={index}
+              className="product-card-wrapper"
+              style={{ flex: '0 0 auto', minWidth: '280px', maxWidth: '320px' }}
+            >
               <Card className="h-100 shadow-sm border-0">
                 <Card.Img
                   variant="top"

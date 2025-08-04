@@ -1,0 +1,41 @@
+.banho-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.banho-desc {
+    font-size: 0.95rem;
+    margin: 0 1rem;
+}
+
+.banho-list {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+
+.btn-whatsapp {
+    background-color: #D63384;
+    border: none;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .banho-img {
+        height: 220px;
+    }
+
+    .banho-desc {
+        font-size: 0.9rem;
+    }
+
+    .banho-list {
+        font-size: 0.85rem;
+    }
+
+    .btn-whatsapp {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

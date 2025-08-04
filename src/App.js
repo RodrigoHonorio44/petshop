@@ -5,6 +5,8 @@ import Home from './screens/Home';
 import TosaEBanho from './screens/TosaEbanho';
 import Contato from './screens/Contato';
 
+import ProdutosGeral from './screens/ProdutosGeral';
+
 function App() {
   return (
     <Router>
@@ -12,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Contato" element={<Contato />} />
         <Route path="/servicos" element={<TosaEBanho />} />
+        <Route path="/Produtos" element={<ProdutosGeral/>} />
       </Routes>
     </Router>
   );

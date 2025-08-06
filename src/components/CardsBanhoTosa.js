@@ -1,13 +1,9 @@
 import React from 'react';
-import { Carousel, Card, Row, Col, Container } from 'react-bootstrap';
+import { Carousel, Card, Row, Col, Container, Button } from 'react-bootstrap';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const petsData = [
-  {
-    id: 1,
-    name: 'Bob',
-    photo: 'https://place-puppy.com/300x300',
-    description: 'Tosa completa e banho relaxante',
-  },
+ 
   {
     id: 2,
     name: 'Luna',
@@ -43,9 +39,9 @@ const CardsBanhoTosa = () => {
   React.useEffect(() => {
     const updateItemsPerSlide = () => {
       const width = window.innerWidth;
-      if (width < 576) setItemsPerSlide(1); // mobile
-      else if (width < 992) setItemsPerSlide(2); // tablets
-      else setItemsPerSlide(3); // desktop
+      if (width < 576) setItemsPerSlide(1);
+      else if (width < 992) setItemsPerSlide(2);
+      else setItemsPerSlide(3);
     };
 
     updateItemsPerSlide();
@@ -57,9 +53,73 @@ const CardsBanhoTosa = () => {
   const slides = createSlides(petsData, itemsPerSlide);
 
   return (
-    <Container className="my-5">
-      <h2 className="mb-4 text-center">Animais que já fizeram Banho e Tosa</h2>
-      <Carousel indicators={false} interval={5000} pause="hover">
+    <Container
+      className="my-5"
+      style={{
+        position: 'relative',
+        backgroundColor: '#FFF0F5', // fundo igual ao da Home
+        borderRadius: '10px',
+        padding: '20px',
+      }}
+    >
+      <h2 className="mb-4 text-center" style={{ color: '#D63384' }}>
+        Animais que já fizeram Banho e Tosa
+      </h2>
+      <Carousel
+        indicators={false}
+        interval={5000}
+        pause="hover"
+        prevIcon={
+          <Button
+            variant="light"
+            style={{
+              borderRadius: '4px',
+              padding: '10px',
+              backgroundColor: 'white',
+              color: '#D63384',
+              border: 'none',
+              boxShadow: '0 0 5px rgba(0,0,0,0.1)',
+              position: 'absolute',
+              top: '50%',
+              left: '10px',
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <FaChevronLeft size={20} />
+          </Button>
+        }
+        nextIcon={
+          <Button
+            variant="light"
+            style={{
+              borderRadius: '4px',
+              padding: '10px',
+              backgroundColor: 'white',
+              color: '#D63384',
+              border: 'none',
+              boxShadow: '0 0 5px rgba(0,0,0,0.1)',
+              position: 'absolute',
+              top: '50%',
+              right: '10px',
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <FaChevronRight size={20} />
+          </Button>
+        }
+      >
         {slides.map((group, idx) => (
           <Carousel.Item key={idx}>
             <Row className="justify-content-center">
@@ -71,7 +131,10 @@ const CardsBanhoTosa = () => {
                   md={colSize}
                   className="d-flex justify-content-center"
                 >
-                  <Card style={{ width: '100%', maxWidth: '18rem' }} className="mb-3 shadow-sm">
+                  <Card
+                    style={{ width: '100%', maxWidth: '18rem' }}
+                    className="mb-3 shadow-sm"
+                  >
                     <Card.Img
                       variant="top"
                       src={pet.photo}

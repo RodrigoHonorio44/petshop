@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; // ✅ Import necessário
 import Atendimento from '../assets/atendimento.png';
 import Exame from '../assets/Exame.png';
 
@@ -45,13 +46,14 @@ const AtendimentoVeterinarioCard = () => (
         🐾 Agendar no WhatsApp
       </Button>
 
-      <Button
-        href="/veterinario"
-        variant="outline-secondary"
-        style={{ fontSize: '0.9rem', padding: '6px 16px' }}
-      >
-        Saber Mais
-      </Button>
+      <Link to="/veterinario">
+        <Button
+          variant="outline-secondary"
+          style={{ fontSize: '0.9rem', padding: '6px 16px' }}
+        >
+          Saber Mais
+        </Button>
+      </Link>
     </div>
   </div>
 );
